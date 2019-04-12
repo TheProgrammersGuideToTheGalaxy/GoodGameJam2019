@@ -4,7 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-Assets/AssetStoreTools*
+Assets/Plugins/Editor/JetBrains
+Assets/Plugins/Editor/JetBrains.meta
 
 # Visual Studio cache directory
 .vs/
