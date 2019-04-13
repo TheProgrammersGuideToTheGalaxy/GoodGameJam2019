@@ -30,6 +30,15 @@ EditorBuildSettings:
     path: Assets/2DGamekit/Scenes/UI/Loading.unity
     guid: ebc4647ff02971c4ba1b207af066be4d
   - enabled: 1
+    path: Assets/Scenes/DreamingSequence1.unity
+    guid: 46915893f21d04588ad54de82a0b3cc2
+  - enabled: 1
     path: Assets/Scenes/DreamLevel1.unity
     guid: b3db810e13e8743648cb3e7d42d22f81
+  - enabled: 1
+    path: Assets/Scenes/DreamLevel1Boss.unity
+    guid: c9b2b178ba96b4ac5b669856eb9b7b0d
+  - enabled: 1
+    path: Assets/Scenes/DreamingSequence2.unity
+    guid: 46f3aa94bc3794e2fa927ae0ec9b8fe1
   m_configObjects: {}
