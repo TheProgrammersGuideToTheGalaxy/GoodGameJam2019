@@ -14,6 +14,6 @@ public class Collision_Detector : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        OnCollisionExit2D(collision);
+        upperClass.OnCollisionExit2D(collision);
     }
 }
