@@ -62,6 +62,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("upper class");
         if (isOnGround = IsCollidingWithGround(collision))
         {
             anim.Grounded = true;
@@ -76,10 +77,11 @@ public class CharacterMovement : MonoBehaviour
 
     private bool IsCollidingWithGround(Collision2D collision)
     {
-        bool areFeetColliding = collision.gameObject.transform.position.y > transform.position.y;
         bool isCollidingWithPlatform = collision.gameObject.layer != LayerMask.GetMask("platform");
 
-        return areFeetColliding && isCollidingWithPlatform;
+        Debug.Log("colliding with platform " + isCollidingWithPlatform);
+
+        return isCollidingWithPlatform;
     }
 
     private void AirDash()
