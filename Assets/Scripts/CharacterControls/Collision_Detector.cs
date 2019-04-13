@@ -6,7 +6,6 @@ public class Collision_Detector : MonoBehaviour
 {
     [SerializeField] private CharacterMovement UpperClass;
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!UpperClass)
