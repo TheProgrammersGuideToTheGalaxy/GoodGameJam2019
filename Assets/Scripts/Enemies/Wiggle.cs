@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Wiggle : MonoBehaviour
 {
-    [SerializeField] private float maxSecondsWiggle = 0.2f;
+    [SerializeField] private float maxSecondsWiggle = 0.1f;
     [SerializeField] private float secondsWiggle = 0.1f;
-    [SerializeField] private float wiggleSpeed = 5f;
+    [SerializeField] private float wiggleSpeed = 80f;
 
     private void Update()
     {
