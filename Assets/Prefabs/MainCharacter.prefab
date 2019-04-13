@@ -64,7 +64,7 @@ MonoBehaviour:
   hasDoubleJumped: 0
   hasAirDashed: 0
   jumpForce: 16
-  movementSpeed: 4
+  movementSpeed: 10
   facingLeft: 0
   anim: {fileID: 2163262847900438256}
   ownBody: {fileID: 8087057031288212548}
@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 5007158769940507329}
   - component: {fileID: 8087057031288212548}
   - component: {fileID: 6244068318316112265}
+  - component: {fileID: 2752430039038147099}
   - component: {fileID: 4858053809117342300}
   - component: {fileID: 4125255315830758344}
   m_Layer: 13
@@ -187,7 +188,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -200,7 +201,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007158769940507330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -219,6 +220,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.2}
   m_EdgeRadius: 0
+--- !u!70 &2752430039038147099
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007158769940507330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: -0.8}
+  m_Size: {x: 0.8, y: 2.6}
+  m_Direction: 0
 --- !u!114 &4858053809117342300
 MonoBehaviour:
   m_ObjectHideFlags: 0
