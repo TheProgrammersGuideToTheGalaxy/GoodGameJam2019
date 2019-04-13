@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4009337407627315852}
+  - {fileID: 934734895431762122}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,3 +232,54 @@ PolygonCollider2D:
       - {x: 3.7, y: -0.25}
       - {x: 4.69, y: -4.06}
       - {x: 0.96, y: -4.82}
+--- !u!1 &4520595665822063481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934734895431762122}
+  - component: {fileID: 6365527623514448206}
+  m_Layer: 0
+  m_Name: bombonThrower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934734895431762122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520595665822063481}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.18, y: 1.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8451337875410758000}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6365527623514448206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520595665822063481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca9ffa84e1f407ea1e5f653ed5bb94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRandomThing:
+  - {fileID: 7998954236319206323, guid: 0b880229ab2e140deb9b35059f252cd2, type: 3}
+  - {fileID: 7998954236319206323, guid: a2dfb4efb413d42e981eca0fe50ed39a, type: 3}
+  - {fileID: 7998954236319206323, guid: 2e550b6e2db004bc18163a35bddc0c38, type: 3}
+  - {fileID: 7998954236319206323, guid: 20a77b1b7673c4f13b7049561bc9cd0b, type: 3}
+  spawnEverySeconds: 1
+  spawnChance: 0.7
+  timeToSpawn: 0
