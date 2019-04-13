@@ -29094,6 +29094,11 @@ PrefabInstance:
       propertyPath: makeObjectAppearWhenDead.Array.data[0]
       value: 
       objectReference: {fileID: 1121207821}
+    - target: {fileID: 6365527623514448206, guid: 7caac6db1ac0143d7873fbd016ecf28d,
+        type: 3}
+      propertyPath: spawnEverySeconds
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7caac6db1ac0143d7873fbd016ecf28d, type: 3}
 --- !u!114 &6680702522453533978 stripped
