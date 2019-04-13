@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 8087057031288212548}
   - component: {fileID: 6244068318316112265}
   - component: {fileID: 4858053809117342300}
+  - component: {fileID: 4125255315830758344}
   m_Layer: 13
   m_Name: Character
   m_TagString: Untagged
@@ -230,4 +231,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff73525834b340d4bbab03e2415ec13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperClass: {fileID: 1599775786208377715}
+  UpperClass: {fileID: 1599775786208377715}
+--- !u!114 &4125255315830758344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007158769940507330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960138f0450083543ad1d17e1352019d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
+  invulnerableAfterDamage: 1
+  invulnerabilityDuration: 3
+  disableOnDeath: 0
+  centreOffset: {x: 0, y: 1}
+  OnHealthSet:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Gamekit2D.Damageable+HealthEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Gamekit2D.Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Gamekit2D.Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnGainHealth:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Gamekit2D.Damageable+HealEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  dataSettings:
+    dataTag: 563acf9f-0bd6-452b-b820-fe6cf10b9fbf
+    persistenceType: 3
