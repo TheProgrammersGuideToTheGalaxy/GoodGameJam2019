@@ -60,7 +60,7 @@ public class CharacterMovement : MonoBehaviour
         anim.HorizontalSpeed = velocity.x;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (isOnGround = IsCollidingWithGround(collision))
         {
@@ -69,7 +69,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
         isOnGround = !IsCollidingWithGround(collision);
     }
@@ -78,6 +78,10 @@ public class CharacterMovement : MonoBehaviour
     {
         bool areFeetColliding = collision.gameObject.transform.position.y > transform.position.y;
         bool isCollidingWithPlatform = collision.gameObject.layer != LayerMask.GetMask("platform");
+
+        Debug.Log(areFeetColliding);
+        Debug.Log(isCollidingWithPlatform);
+
 
         return (areFeetColliding && isCollidingWithPlatform);
     }
@@ -105,10 +109,10 @@ public class CharacterMovement : MonoBehaviour
     private void Move()
     {
         float speed = Input.GetAxisRaw("Horizontal") * movementSpeed;
-        if(speed < 0 && facingLeft)
+        if(speed < 0 && !facingLeft)
         {
             Flip();
-        } else if (speed > 0 && !facingLeft)
+        } else if (speed > 0 && facingLeft)
         {
             Flip();
         }
