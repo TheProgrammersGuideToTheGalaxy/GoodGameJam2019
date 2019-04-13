@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d41d01e3cd482c9aeaf7adc53c37e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSecondsWiggle: 0.2
+  maxSecondsWiggle: 0.1
   secondsWiggle: 0.1
-  wiggleSpeed: 5
+  wiggleSpeed: 80
 --- !u!1 &6090929258913585192
 GameObject:
   m_ObjectHideFlags: 0
