@@ -230,7 +230,7 @@ namespace Gamekit2D
         public void ScanForPlayer()
         {
             //If the player don't have control, they can't react, so do not pursue them
-            if (!PlayerInput.Instance.HaveControl)
+            if (PlayerInput.Instance == null || !PlayerInput.Instance.HaveControl)
                 return;
 
             Vector3 dir = PlayerCharacter.PlayerInstance.transform.position - transform.position;
