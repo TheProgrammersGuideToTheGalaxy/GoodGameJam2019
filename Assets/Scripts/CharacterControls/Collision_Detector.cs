@@ -9,11 +9,21 @@ public class Collision_Detector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!UpperClass)
+        {
+            return;
+        }
+
         UpperClass.OnCollisionEnter2D(collision);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        if (!UpperClass)
+        {
+            return;
+        }
+
         UpperClass.OnCollisionExit2D(collision);
     }
 }
