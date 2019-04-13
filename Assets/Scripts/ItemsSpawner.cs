@@ -9,7 +9,7 @@ public class ItemsSpawner : MonoBehaviour
 
     public void SpawnWithId(int id)
     {
-        Debug.Log(id);
+        id -= 1;
         if(id == remainingHealth)
         {
             Debug.Log("Preparing the spawner!");
