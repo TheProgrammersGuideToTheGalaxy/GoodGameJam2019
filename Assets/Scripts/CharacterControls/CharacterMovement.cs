@@ -79,11 +79,7 @@ public class CharacterMovement : MonoBehaviour
         bool areFeetColliding = collision.gameObject.transform.position.y > transform.position.y;
         bool isCollidingWithPlatform = collision.gameObject.layer != LayerMask.GetMask("platform");
 
-        Debug.Log(areFeetColliding);
-        Debug.Log(isCollidingWithPlatform);
-
-
-        return (areFeetColliding && isCollidingWithPlatform);
+        return areFeetColliding && isCollidingWithPlatform;
     }
 
     private void AirDash()
