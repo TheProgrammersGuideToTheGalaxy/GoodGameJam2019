@@ -31,7 +31,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 160b9b868b1fc4886aa154bcb3a38194, type: 3}
-    totalSpriteSurfaceArea: 3407872
+    totalSpriteSurfaceArea: 3934723
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -44,8 +44,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9f60d239f99af4ad389028d6922368da, type: 3}
   - {fileID: 21300000, guid: 31d4ecd9e669f4c27a37fea617d254d0, type: 3}
   - {fileID: 21300000, guid: d696527adf85040bc813d6c1af99cfe3, type: 3}
+  - {fileID: 21300000, guid: 04de75bae03e0406f984ac310ee7fbf1, type: 3}
   - {fileID: 21300000, guid: 9ab6620d5e25549e38a94029bd98031f, type: 3}
   - {fileID: 21300000, guid: 7b46b91d546ac4aaeb7e66b89de30ef5, type: 3}
+  - {fileID: 21300000, guid: 894d6e1d08e50476596664e11a95c24d, type: 3}
   - {fileID: 21300000, guid: 6bee4dbd846ce4753919fa9167fce988, type: 3}
   - {fileID: 21300000, guid: 8885752f474f54eeda44e58dede38634, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -58,8 +60,10 @@ SpriteAtlas:
   - platform-04
   - platform-08
   - platform-single-right-bottom
+  - platform-03
   - platform-left-bottom
   - platform-bottom
+  - platform-09
   - platform-single-left-bottom
   - platform-06
   m_Tag: DreamPlatformAtlas

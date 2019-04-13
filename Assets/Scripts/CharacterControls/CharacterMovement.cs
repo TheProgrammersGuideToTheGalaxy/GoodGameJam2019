@@ -15,17 +15,15 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private bool facingLeft = false;
 
-
-    private Rigidbody2D ownBody;
-    private Animator anim;
+    [SerializeField] private CharacterAnimation anim;
+    [SerializeField] private Rigidbody2D ownBody;
+    [SerializeField] private SpriteRenderer ownSpriteRenderer;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-        ownBody = GetComponent<Rigidbody2D>();
-        if (!facingLeft)
+        if (facingLeft)
         {
-            facingLeft = true;
+            facingLeft = false;
             Flip();
         }
     }
@@ -56,15 +54,17 @@ public class CharacterMovement : MonoBehaviour
         {
             Stand();
         }
-        anim.SetFloat("VerticalSpeed", ownBody.velocity.y);
-        anim.SetFloat("HorizontalSpeed", ownBody.velocity.x);
+
+        var velocity = ownBody.velocity;
+        anim.VerticalSpeed =  velocity.y;
+        anim.HorizontalSpeed = velocity.x;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isOnGround = IsCollidingWithGround(collision))
         {
-            anim.SetBool("Grounded", true);
+            anim.Grounded = true;
             hasDoubleJumped = hasAirDashed = false;
         }
     }
@@ -90,14 +90,14 @@ public class CharacterMovement : MonoBehaviour
     private void DoubleJump()
     {
         hasDoubleJumped = true;
-        anim.SetBool("isDoubleJumping", true);
+        anim.IsDoubleJumping = true;
         Jump(); 
     }
 
     private void Jump()
     {
         isOnGround = false;
-        anim.SetBool("Grounded", false);
+        anim.Grounded = false;
 
         ownBody.velocity = new Vector2(ownBody.velocity.x, jumpForce);
     }
@@ -123,8 +123,6 @@ public class CharacterMovement : MonoBehaviour
     private void Flip()
     {
         facingLeft = !facingLeft;
-        Vector3 finalScale = transform.localScale;
-        finalScale.x *= -1;
-        transform.localScale = finalScale;
+        ownSpriteRenderer.flipX = facingLeft;
     }
 }
