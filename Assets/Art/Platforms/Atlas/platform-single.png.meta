@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f06d922c36e34c25936eee038166d0f
+guid: 88e5fa91283104272ba1bcdf003edeeb
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -96,14 +96,13 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape:
-    - - {x: -224, y: 143}
-      - {x: -237, y: -79}
-      - {x: -177, y: -256}
-      - {x: 256, y: -256}
-      - {x: 256, y: 204}
-      - {x: -161, y: 204}
+    - - {x: -185, y: -239}
+      - {x: -242, y: -174}
+      - {x: -245, y: 210}
+      - {x: 224, y: 210}
+      - {x: 219, y: -245}
     bones: []
-    spriteID: cd5bca2a01e8b4161bc5123fb40fb04e
+    spriteID: 16e24de0f211842c9a45be30a22db3fe
     vertices: []
     indices: 
     edges: []
