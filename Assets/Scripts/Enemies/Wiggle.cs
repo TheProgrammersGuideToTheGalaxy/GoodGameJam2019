@@ -6,6 +6,12 @@ public class Wiggle : MonoBehaviour
     [SerializeField] private float secondsWiggle = 0.1f;
     [SerializeField] private float wiggleSpeed = 80f;
 
+    public float MaxSecondsWiggle
+    {
+        get { return maxSecondsWiggle; }
+        set { maxSecondsWiggle = value; }
+    }
+
     private void Update()
     {
         var dt = Time.deltaTime;
