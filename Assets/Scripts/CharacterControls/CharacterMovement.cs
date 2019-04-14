@@ -62,9 +62,10 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("upper class");
-        if (isOnGround = IsCollidingWithGround(collision))
+        bool onGround = IsCollidingWithGround(collision);
+        if (onGround)
         {
+            isOnGround = onGround;
             anim.Grounded = true;
             hasDoubleJumped = hasAirDashed = false;
         }
@@ -72,16 +73,25 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-        isOnGround = !IsCollidingWithGround(collision);
+        bool onGround = IsCollidingWithGround(collision);
+        isOnGround = onGround ? false : isOnGround;
     }
 
     private bool IsCollidingWithGround(Collision2D collision)
     {
-        bool isCollidingWithPlatform = collision.gameObject.layer != LayerMask.GetMask("platform");
+        if (collision.collider.gameObject.name == "FeetCollider")
+        {
+            Debug.Log("check1");
+            return collision.otherCollider.gameObject.layer == LayerMask.NameToLayer("Platform");
+        } else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Platform"))
+        {
+            Debug.Log("check2");
+            return collision.otherCollider.gameObject.name == "FeetCollider";
+        }
 
-        Debug.Log("colliding with platform " + isCollidingWithPlatform);
+//        bool isCollidingWithPlatform = collision.gameObject.layer != LayerMask.GetMask("platform");
 
-        return isCollidingWithPlatform;
+        return false;
     }
 
     private void AirDash()
