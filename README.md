@@ -14,7 +14,7 @@ To wake up from this dream he has to solve the problem and defeat it, otherwise 
 
 ![game1](Documentation/gameplay.gif "Gameplay")
 
-## Controls
+## Controls
 
 Keyboard arrows, space for jumping.
 
