@@ -6,7 +6,14 @@ Developed in Unity2018.3.11f1
 
 ## Story
 
-(Screenshots here)
+A young scientist goes to bed and starts dreaming the craziest dreams about his everyday and professional problems.
+To wake up from this dream he has to solve the problem and defeat it, otherwise he has to dream his dream repeatedly until he solves his issue.
+
+![game1](Documentation/gameplay.gif "Gameplay")
+
+## Controls
+
+Keyboard arrows, space for jumping.
 
 ## Team
  - Tatjana Dumler
